@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Compile Remove="Commands\CreateEvent\**" />
+    <Compile Remove="Commands\DeleteEvent\**" />
+    <Compile Remove="Commands\UpdateEvent\**" />
+    <EmbeddedResource Remove="Commands\CreateEvent\**" />
+    <EmbeddedResource Remove="Commands\DeleteEvent\**" />
+    <EmbeddedResource Remove="Commands\UpdateEvent\**" />
+    <None Remove="Commands\CreateEvent\**" />
+    <None Remove="Commands\DeleteEvent\**" />
+    <None Remove="Commands\UpdateEvent\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <ProjectReference Include="..\TicketManagement.Domain\TicketManagement.Domain.csproj" />
+    <ProjectReference Include="..\TicketManagement.Infrastructure\TicketManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

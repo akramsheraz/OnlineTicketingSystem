@@ -1,0 +1,8 @@
+﻿/Application/*.suo
+/Application/*.user
+/Application/bin
+/Application/obj
+/Application/packages
+
+/.vs
+/Application/.vs

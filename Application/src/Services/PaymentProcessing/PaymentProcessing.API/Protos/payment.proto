@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "PaymentProcessing.Grpc";
+
+package PaymentProcessing;
+
+// The discount service definition.
+service PaymentProtoService {
+	// Discount CRUD Operations	
+	rpc CreatePayment (CreatePaymentRequest) returns (PaymentResponseModel);
+	rpc CreateRefund (CreateRefundRequest) returns (PaymentResponseModel);
+}
+
+message GetPaymentRequest {
+	string productName = 1;
+}
+
+message PaymentResponseModel {
+	int32 id = 1;
+	string productName = 2;
+	string description = 3;
+	int32 amount = 4;
+}
+
+message CreatePaymentRequest {
+	PaymentResponseModel payment = 1;
+}
+message CreateRefundRequest {
+	PaymentResponseModel payment = 1;
+}
